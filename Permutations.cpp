@@ -12,8 +12,8 @@ void Permute(string soFar, string left)
 
     for(int i =0; i<left.length(); ++i)
     {
-        //uncomment following line for unique permutations
-        //if(left.find(left[i], i+1) == string::npos) 
+        //check to keep only unique permutations
+        if(left.find(left[i], i+1) == string::npos)
         {
             string next = soFar + left[i];
             string rem = left.substr(0, i)+left.substr(i+1);
